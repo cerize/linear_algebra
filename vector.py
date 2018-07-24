@@ -100,39 +100,3 @@ class Vector(object):
     def is_zero(self, tolerance=1e-10):
         return self.magnitude() < tolerance
 
-v1 = Vector([7.887, 4.138])
-v2 = Vector([-8.802, 6.776])
-v3 = Vector([-5.955, -4.904, -1.874])
-v4 = Vector([-4.496, -8.755, 7.103])
-
-v5 = Vector([3.183, -7.627])
-v6 = Vector([-2.668, 5.319])
-v7 = Vector([7.35, 0.221, 5.188])
-v8 = Vector([2.751, 8.259, 3.985])
-
-
-
-# print(v1.dot(v2))
-# print(v3.dot(v4))
-
-# print(v5.angle_with(v6))
-# print(v7.angle_with(v8,True))
-
-
-v9 = Vector([-7.579, -7.88])
-v10 = Vector([22.737, 23.64])
-
-print(v9.is_parallel_to(v10))
-print(v9.is_orthogonal_to(v10))
-
-v11 = Vector([-2.029, 9.97, 4.172])
-v12 = Vector([-9.231, -6.639, -7.245])
-
-print(v11.is_parallel_to(v12))
-print(v11.is_orthogonal_to(v12))
-
-v13 = Vector([-2.328, -7.284, -1.214])
-v14 = Vector([-1.821, 1.072, -2.94])
-
-print(v13.is_parallel_to(v14))
-print(v13.is_orthogonal_to(v14))
