@@ -138,3 +138,15 @@ class Vector(object):
                 raise Exception(self.NO_UNIQUE_PARALLEL_COMPONENT_MSG)
             else:
                 raise e
+    
+    # The cross product a × b is defined as a vector c that 
+    # is perpendicular (orthogonal) to both a and b, with a 
+    # direction given by the right-hand rule and a magnitude 
+    # equal to the area of the parallelogram that the vectors span.
+    def cross_product(self, v):
+        x1, y1, z1 = self.coordinates
+        x2, y2, z2 = v.coordinates
+        x3 = y1*z2 - y2*z1
+        y3 = -(x1*z2 - x2*z1)
+        z3 = x1*y2 - x2*y1
+        return Vector([x3, y3, z3])

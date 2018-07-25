@@ -60,4 +60,10 @@ v19 = Vector([3.009, -6.172, 3.692, -2.51])
 v20 = Vector([6.404, -9.144, 2.759, 8.718])
 
 p = v19.projection(v20)
-print(p[0], p[1])
+# print(p[0], p[1])
+
+v1 = Vector([5, 3, -2])
+v2 = Vector([-1, 0, 3])
+
+cross_product = v1.cross_product(v2)
+print(cross_product)
