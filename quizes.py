@@ -28,17 +28,36 @@ v8 = Vector([2.751, 8.259, 3.985])
 v9 = Vector([-7.579, -7.88])
 v10 = Vector([22.737, 23.64])
 
-print(v9.is_parallel_to(v10))
-print(v9.is_orthogonal_to(v10))
+# print(v9.is_parallel_to(v10))
+# print(v9.is_orthogonal_to(v10))
 
 v11 = Vector([-2.029, 9.97, 4.172])
 v12 = Vector([-9.231, -6.639, -7.245])
 
-print(v11.is_parallel_to(v12))
-print(v11.is_orthogonal_to(v12))
+# print(v11.is_parallel_to(v12))
+# print(v11.is_orthogonal_to(v12))
 
 v13 = Vector([-2.328, -7.284, -1.214])
 v14 = Vector([-1.821, 1.072, -2.94])
 
-print(v13.is_parallel_to(v14))
-print(v13.is_orthogonal_to(v14))
+# print(v13.is_parallel_to(v14))
+# print(v13.is_orthogonal_to(v14))
+
+v15 = Vector([3.039, 1.879])
+v16 = Vector([0.825, 2.036])
+
+p = v15.projection(v16)
+# print(p[0], p[1])
+
+
+v17 = Vector([-9.88, -3.264, -8.159])
+v18 = Vector([-2.155, -9.353, -9.473])
+
+p = v17.projection(v18)
+# print(p[0], p[1])
+
+v19 = Vector([3.009, -6.172, 3.692, -2.51])
+v20 = Vector([6.404, -9.144, 2.759, 8.718])
+
+p = v19.projection(v20)
+print(p[0], p[1])

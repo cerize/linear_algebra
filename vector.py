@@ -99,4 +99,18 @@ class Vector(object):
 
     def is_zero(self, tolerance=1e-10):
         return self.magnitude() < tolerance
+    
+    # v projection into b:
+    # v = v_parallel + v_orthogonal
+    # ||v_parallel|| = ||v||cos(theta)
+    # ||v_parallel|| = v . ub
+
+    def projection(self, b):
+        ub = b.normalized()
+        v_parallel_mag = self.dot(ub)
+
+        v_parallel = ub.times_scalar(v_parallel_mag)
+        vT = self.minus(v_parallel)
+
+        return v_parallel, vT
 
