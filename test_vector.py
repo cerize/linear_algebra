@@ -11,4 +11,4 @@ class VectorTest(unittest.TestCase):
         v1 = Vector([5, 3, -2])
         v2 = Vector([-1, 0, 3])
         result = Vector([9, -13, 3])
-        self.assertEqual(v1.cross_product(v2), result)
+        self.assertEqual(v1.cross(v2), result)

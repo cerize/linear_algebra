@@ -143,10 +143,25 @@ class Vector(object):
     # is perpendicular (orthogonal) to both a and b, with a 
     # direction given by the right-hand rule and a magnitude 
     # equal to the area of the parallelogram that the vectors span.
-    def cross_product(self, v):
+    # cross product only makes sense for 3 dimension vectors
+    def cross(self, v):
         x1, y1, z1 = self.coordinates
         x2, y2, z2 = v.coordinates
         x3 = y1*z2 - y2*z1
         y3 = -(x1*z2 - x2*z1)
         z3 = x1*y2 - x2*y1
+
+        # TODO: address the case when the vector is 2 dimensions
         return Vector([x3, y3, z3])
+    
+    # The area of the parallelogram defined by two vectors
+    # is equal to the magnitude of the cross product between
+    # those vectors
+    def area_of_parallelogram_with(self, v):
+        return self.cross(v).magnitude()
+
+    # The area of the triangle defined by two vectors
+    # is equal to half the magnitude of the cross product 
+    # between those vectors
+    def area_of_triangle_with(self, v):
+        return self.area_of_parallelogram_with(v) / Decimal('2.0')
